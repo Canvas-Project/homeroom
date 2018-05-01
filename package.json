@@ -38,7 +38,7 @@
     "eject": "react-scripts eject"
   },
   "main": "./server/index.js",
-  "proxy": "http://localhost:3030",
+  "proxy": "http://localhost:3031",
   "devDependencies": {
     "redux-devtools-extension": "^2.13.2"
   }

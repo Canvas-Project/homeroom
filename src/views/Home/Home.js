@@ -6,7 +6,6 @@ import AdminHome from '../../components/Administrator/Home/AdminHome';
 import LoadData from '../../components/LoadData/LoadData'
 import {connect} from 'react-redux';
 import {getUser} from '../../redux/user';
-import LoadData from '../../components/LoadData/LoadData.js';
 
 class Home extends Component {
 
