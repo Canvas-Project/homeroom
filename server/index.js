@@ -18,6 +18,7 @@ const express = require('express')
    
 // ================ INVOKE EXPRESS ============= 
 const app = express();
+app.use( express.static( `${__dirname}/../build` ) );
 // ======== IMPORT VARIABLES FROM .env =========
 const {
      SESSION_PORT

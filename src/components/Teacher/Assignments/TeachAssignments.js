@@ -13,9 +13,9 @@ class TeachAssignments extends Component {
     }
     render(){
         let teacher = this.props.teacher;
-        let courseSelection  = this.state.selectedCourse;
+        // let courseSelection  = this.state.selectedCourse;
         let courses = teacher.getCourses.map((e,i)=>{return <button className="stud_button" onClick={()=>this.setState({selectedCourse:e.course_id,courseName:e.course_name})} key={i}>{e.course_name}</button>});
-        let topics  = teacher ? teacher.template.filter((e,i)=> e.template_course_id === courseSelection).map((e,i)=>{return <div key={i}>{e.assignment_template_topic}</div>}): ''
+        // let topics  = teacher ? teacher.template.filter((e,i)=> e.template_course_id === courseSelection).map((e,i)=>{return <div key={i}>{e.assignment_template_topic}</div>}): ''
 
         return (
           
@@ -31,7 +31,7 @@ class TeachAssignments extends Component {
        
             <div className="right-column">
                 <h1 className="horizontal-line">View Assignments for {this.state.courseName}</h1>
-                {topics}
+                <p>Select Course To View Assignments</p>
             </div>
         </div> 
         )

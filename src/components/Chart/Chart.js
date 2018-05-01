@@ -134,9 +134,9 @@ class Chart extends Component {
                   <div className="chartButtonsWrapper">{chartButtons}</div>
 
                   <h1 className="horizontal-line">Recent Comments</h1>
-                  <p className="gray">No Comments.</p>
-                  <h1 className="horizontal-line">Recently Submitted</h1>
-                  <p className="gray">No Recent Submissions.</p>
+                  <p className="gray">No Comments</p>
+                  <h1 className="horizontal-line">Homeroom Recommendations</h1>
+                  <p className="gray">None at this time</p>
               </div>
             <div className="right-column">
                     <div className="test_chart_wrapper">   
