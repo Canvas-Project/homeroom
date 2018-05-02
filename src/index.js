@@ -5,19 +5,16 @@ import './index.css';
 import App from './App';
 import {Provider} from 'react-redux';
 import store from './store';
-import unregister from './registerServiceWorker';
-import {BrowserRouter as Router} from 'react-router-dom';
+import {HashRouter} from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 
 ReactDOM.render(
-   <Router>
-        <Provider store={store}>
-            <MuiThemeProvider>
-                <App />
-                </MuiThemeProvider>
-        </Provider>
-   </Router>
+  <Provider store={store}>
+    <MuiThemeProvider>
+      <HashRouter>
+        <App />
+      </HashRouter>
+    </MuiThemeProvider>
+  </Provider>
    , document.getElementById('root'));
-
-unregister();

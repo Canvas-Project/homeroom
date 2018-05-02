@@ -6,7 +6,7 @@ import Navbar from './components/Navbar/Navbar';
 
 export default class App extends Component {
   render() {
-    let currentPath = document.location.pathname;
+    let currentPath = document.location.hash;
     
     // if (currentPath !== '#/') {
     //   axios.get('/auth/me').then(res => {
@@ -18,8 +18,8 @@ export default class App extends Component {
 
     return (
       <div className="app-outer">
-        {currentPath === "/" ? '' : <Navbar/>}
-          <div className={currentPath === "/" ? '' : "app-inner"}>
+        {currentPath === "#/" ? '' : <Navbar/>}
+          <div className={currentPath === "#/" ? '' : "app-inner"}>
             {routes}
           </div>
       </div>

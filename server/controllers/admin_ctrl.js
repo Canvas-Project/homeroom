@@ -3,7 +3,15 @@ module.exports= {
         const db = req.app.get('db')
         if(req.user){
             const {user_id} = req.user
-            db.run(`SELECT * 
+            db.run(`SELECT 
+                    user_id,
+                    account_type,
+                    username, first_name,
+                    last_name,
+                    email,
+                    user_photo,
+                    phone_number,
+                    display_name 
                     FROM users
                     WHERE account_type = 'Teacher'`,
                 function(err,res){
@@ -20,8 +28,16 @@ module.exports= {
         const db = req.app.get('db')
         if(req.user){
             const {user_id} = req.user
-            db.run(`SELECT * 
-                    FROM users 
+            db.run(`SELECT 
+                    user_id,
+                    account_type,
+                    username, first_name,
+                    last_name,
+                    email,
+                    user_photo,
+                    phone_number,
+                    display_name 
+                    FROM users
                     WHERE account_type = 'Student'`,
                 function(err,res){
                     var students = res;
@@ -37,8 +53,16 @@ module.exports= {
         const db = req.app.get('db')
         if(req.user){
             const {user_id} = req.user
-            db.run(`SELECT * 
-                    FROM users 
+            db.run(`SELECT 
+                    user_id,
+                    account_type,
+                    username, first_name,
+                    last_name,
+                    email,
+                    user_photo,
+                    phone_number,
+                    display_name 
+                    FROM users
                     WHERE account_type = 'Parent'`,
                 function(err,res){
                     var parents = res;
