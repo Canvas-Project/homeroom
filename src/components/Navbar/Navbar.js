@@ -167,40 +167,38 @@ class Navbar extends Component {
                 <div className="secondary-menu">
 {/*======== GLOBAL SECONDARY NAVIGATION OPTIONS ========*/}
                     {/*SHOW FOR ALL USERS*/}
-                    {document.location.pathname === '/home' && 
+                    {document.location.hash === '#/home' && 
                     <ul><li>{`Welcome back, ${this.props.user.first_name}!`}</li></ul> }
 
                     {/*SHOW FOR ALL USERS*/}
-                    {document.location.pathname === '/account'
+                    {document.location.hash === '#/account'
                     && 
-                    <ul>
-                        <li><Link to='/account'>Account Settings</Link></li>
-                    </ul>}
+                    <ul><li><Link to='/account'>Account Settings</Link></li></ul>}
 
 {/*======== ADMINISTRATOR SECONDARY NAVIGATION OPTIONS ========*/}
                     {/*TEACHRERS VIEW FOR ADMINISTRATORS*/}
-                    {((document.location.pathname === '/teachers' || document.location.pathname === '/teachers/create-teacher') && accountType === "Administrator") && 
+                    {((document.location.hash === '#/teachers' || document.location.hash === '#/teachers/create-teacher') && accountType === "Administrator") && 
                     <ul>
                         <li><Link to='/teachers'>View Teachers</Link></li>
                         <li><Link to='/teachers/create-teacher'>Create Teacher</Link></li>
                     </ul> }
 
                     {/*STUDENTS VIEW FOR ADMINISTRATORS*/}
-                    {((document.location.pathname === '/students' || document.location.pathname === '/students/create-student') && accountType === "Administrator") &&
+                    {((document.location.hash === '#/students' || document.location.hash === '#/students/create-student') && accountType === "Administrator") &&
                     <ul>
                         <li><Link to='/students'>View Students</Link></li>
                         <li><Link to='/students/create-student'>Create Student</Link></li>
                     </ul> }
 
                     {/*PARENTS VIEW FOR ADMINISTRATORS*/}
-                    {((document.location.pathname === '/parents' || document.location.pathname === '/parents/create-parent') && accountType === "Administrator") && 
+                    {((document.location.hash === '#/parents' || document.location.hash === '#/parents/create-parent') && accountType === "Administrator") && 
                     <ul>
                         <li><Link to='/parents'>View Parents</Link></li>
                         <li><Link to='/parents/create-parent'>Create Parent</Link></li>
                     </ul> }
 
                     {/*COURSES VIEW FOR ADMINISTRATORS*/}
-                    {(document.location.pathname === '/courses' && accountType === "Administrator") &&
+                    {(document.location.hash === '#/courses' && accountType === "Administrator") &&
                     <ul>
                         <li><Link to='/courses'>View Courses</Link></li>
                         <li><Link to='/courses/create-course'>Create Course</Link></li>
@@ -216,20 +214,20 @@ class Navbar extends Component {
 
 {/*======== TEACHER SECONDARY NAVIGATION OPTIONS ========*/}
                     {/*STUDENTS VIEW FOR TEACHERS*/}
-                    {(document.location.pathname === '/students' && accountType === "Teacher") &&
+                    {(document.location.hash === '#/students' && accountType === "Teacher") &&
                     <ul>
                         <li><Link to='/students'>View Students</Link></li>
                     </ul> }
 
                     {/*COURSES VIEW FOR TEACHERS*/}
-                    {(document.location.pathname === '/courses' && accountType === "Teacher") &&
+                    {(document.location.hash === '#/courses' && accountType === "Teacher") &&
                     <ul>
                         <li><Link to='/courses'>View Courses</Link></li>
                         <li><Link to='/courses/grades'>Grades</Link></li>
                     </ul>}
 
                     {/*COURSES VIEW FOR TEACHERS*/}
-                    {(document.location.pathname === '/assignments' && accountType === "Teacher") &&
+                    {(document.location.hash === '#/assignments' && accountType === "Teacher") &&
                     <ul>
                         <li><Link to='/assignments'>View All</Link></li>
                         <li><Link to='/assignments/assign-assignment'>Assign</Link></li>
@@ -237,7 +235,7 @@ class Navbar extends Component {
                     </ul>}
 
                     {/*CALENDAR VIEW FOR TEACHERS*/}
-                    {(document.location.pathname === '/calendar' && accountType === "Teacher") &&
+                    {(document.location.hash === '#/calendar' && accountType === "Teacher") &&
                     <ul>
                         <li><Link to='/calendar'>View Calendar</Link></li>
                     </ul>}
@@ -245,18 +243,18 @@ class Navbar extends Component {
                     
 {/*======== STUDENT SECONDARY NAVIGATION OPTIONS ========*/}
                     {/*COURSES VIEW FOR STUDENTS*/}
-                    {(document.location.pathname === '/dashboard' && accountType === "Student") &&
+                    {(document.location.hash === '#/dashboard' && accountType === "Student") &&
                     <ul></ul> }
 
                     {/*COURSES VIEW FOR STUDENTS*/}
-                    {(document.location.pathname === '/courses' && accountType === "Student") &&
+                    {(document.location.hash === '#/courses' && accountType === "Student") &&
                     <ul>
                         <li><Link to="/courses">Course Home</Link></li>
                         <li><Link to='/courses/assignments'>View Assignments</Link></li>
                     </ul>}
 
                     {/*CALENDAR VIEW FOR STUDENTS*/}
-                    {(document.location.pathname === '/calendar' && accountType === "Student") &&
+                    {(document.location.hash === '#/calendar' && accountType === "Student") &&
                     <ul>
                         <li><Link to='/calendar'>View Calendar</Link></li>
                     </ul>}
@@ -264,12 +262,12 @@ class Navbar extends Component {
 
 {/*======== PARENT SECONDARY NAVIGATION OPTIONS ========*/}
                     {/*STUDENTS VIEW FOR PARENTS*/}
-                    {(document.location.pathname === '/students' && accountType === "Parent") &&
+                    {(document.location.hash === '#/students' && accountType === "Parent") &&
                     <ul>
                         <li><Link to='/students'>View Students</Link></li>
                     </ul> }
 
-                    {(document.location.pathname === '/courses' && accountType === "Parent") &&
+                    {(document.location.hash === '#/courses' && accountType === "Parent") &&
                     <ul>
                         <li><Link to='/calendar'>View Calendar</Link></li>
                     </ul>}
