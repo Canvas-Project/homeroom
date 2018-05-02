@@ -34,6 +34,7 @@ massive(CONNECTION_STRING).then(db => {
    app.listen(SESSION_PORT, () => console.log(`Listening on port ${SESSION_PORT}`))
 })
 
+
 // =============== AUTH / MIDDLEWARE ===========
 app.use(bodyParser.json());
 app.use( session({
@@ -76,9 +77,9 @@ passport.deserializeUser((user, done) => {
 app.use(passport.initialize());
 app.use(passport.session());
 
-
 // ========== LOGIN & LOGOUT ENDPOINTS =========
 app.post('/api/login', passport.authenticate('local'), (req, res, next) => {
+   console.log('login hit');
    if(req.user === 'Unauthorized') {
       res.status(200).send(req.user)
    } else {
@@ -88,6 +89,7 @@ app.post('/api/login', passport.authenticate('local'), (req, res, next) => {
 })
 
 app.get('/logout', (req,res) => {
+  console.log('logout hit');
    req.logout();
    res.redirect(REACT_APP_LOGIN_PAGE);
 })
