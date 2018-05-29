@@ -7,10 +7,10 @@ import TeacherCourses from '../../components/Administrator/Courses/Courses.js';
 
 class CoursesView extends Component {
     render() {
-        const currentPath = document.location.pathname;
+        const currentPath = document.location.hash;
         let accountType = this.props.user.account_type;
-        let currentCourse = ((currentPath === '/courses') ? <Courses/> :
-                            (currentPath === '/courses/assignments') ? <CourseAssignment/> : '')
+        let currentCourse = ((currentPath === '#/courses') ? <Courses/> :
+                            (currentPath === '#/courses/assignments') ? <CourseAssignment/> : '')
         return (
             accountType === "Administrator" ? <TeacherCourses />:
             accountType === "Teacher" ? 'Heyo':
